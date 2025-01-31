@@ -1,4 +1,4 @@
-[Component Library - v0.0.8](../README.md) / ButtonProps
+[Component Library - v0.0.9](../README.md) / ButtonProps
 
 # Interface: ButtonProps
 
@@ -22,7 +22,7 @@ The button's content
 
 #### Defined in
 
-[src/components/Button/Button.tsx:6](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L6)
+[src/components/Button/Button.tsx:6](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L6)
 
 ___
 
@@ -34,7 +34,7 @@ Additional CSS class names
 
 #### Defined in
 
-[src/components/Button/Button.tsx:14](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L14)
+[src/components/Button/Button.tsx:14](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L14)
 
 ___
 
@@ -46,7 +46,7 @@ Disabled state
 
 #### Defined in
 
-[src/components/Button/Button.tsx:12](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L12)
+[src/components/Button/Button.tsx:12](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L12)
 
 ___
 
@@ -66,7 +66,7 @@ Optional click handler
 
 #### Defined in
 
-[src/components/Button/Button.tsx:10](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L10)
+[src/components/Button/Button.tsx:10](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L10)
 
 ___
 
@@ -78,4 +78,4 @@ Optional variant for different button styles
 
 #### Defined in
 
-[src/components/Button/Button.tsx:8](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L8)
+[src/components/Button/Button.tsx:8](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L8)

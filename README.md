@@ -1,6 +1,6 @@
 Component Library
 
-# Component Library - v0.0.8
+# Component Library - v0.0.9
 
 Component Library
 A modern React component library with TypeScript support
@@ -44,4 +44,4 @@ A customizable button component with different variants
 
 #### Defined in
 
-[src/components/Button/Button.tsx:27](https://github.com/RandAOLabs/component-library/blob/4e3797d84adbb477dc72b653e51f1bf36f1c40c3/src/components/Button/Button.tsx#L27)
+[src/components/Button/Button.tsx:27](https://github.com/RandAOLabs/component-library/blob/a5627d44bc832c1c1d7724ac395996e0caaa7f84/src/components/Button/Button.tsx#L27)
