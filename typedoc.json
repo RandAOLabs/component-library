@@ -9,9 +9,6 @@
     "excludePrivate": true,
     "excludeProtected": true,
     "excludeExternals": true,
-    "plugin": [
-        "typedoc-plugin-markdown"
-    ],
     "theme": "default",
     "readme": "none"
 }
