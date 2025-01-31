@@ -1,6 +1,6 @@
 {
   "name": "@randaotoken/component-library",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -53,12 +53,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/randaotoken/component-library"
+    "url": "https://github.com/RandAOLabs/component-library"
   },
   "bugs": {
-    "url": "https://github.com/randaotoken/component-library/issues"
+    "url": "https://github.com/RandAOLabs/component-library/issues"
   },
-  "homepage": "https://github.com/randaotoken/component-library#readme",
+  "homepage": "https://github.com/RandAOLabs/component-library#readme",
   "publishConfig": {
     "access": "public"
   }
