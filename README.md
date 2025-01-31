@@ -17,6 +17,12 @@ A modern React component library with TypeScript support, built with Vite.
 npm install @randaotoken/component-library
 ```
 
+## Documentation
+
+You can find the documentation in two places:
+1. [Online Documentation](https://randaotoken.github.io/component-library/) - Hosted on GitHub Pages
+2. Local Documentation - Available in the `docs` directory after installing the package
+
 ## Usage
 
 ```tsx

@@ -1,12 +1,13 @@
 {
   "name": "@randaotoken/component-library",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "docs"
   ],
   "engines": {
     "node": ">=22.0.0"
