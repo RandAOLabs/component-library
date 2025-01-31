@@ -14,13 +14,13 @@ A modern React component library with TypeScript support, built with Vite.
 ## Installation
 
 ```bash
-npm install component-library
+npm install @randaotoken/component-library
 ```
 
 ## Usage
 
 ```tsx
-import { Button } from 'component-library';
+import { Button } from '@randaotoken/component-library';
 
 function App() {
   return (
