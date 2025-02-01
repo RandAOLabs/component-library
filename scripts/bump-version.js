@@ -22,16 +22,6 @@ function getCurrentBranch() {
     return execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
 }
 
-function checkWorkingDirectory() {
-    try {
-        const status = execSync('git status --porcelain').toString();
-        return status === '';
-    } catch (error) {
-        console.error('Error checking git status:', error.message);
-        process.exit(1);
-    }
-}
-
 function main() {
     // Check arguments
     const versionType = process.argv[2];
@@ -45,12 +35,6 @@ function main() {
     const currentBranch = getCurrentBranch();
     if (currentBranch !== 'main') {
         console.error('Please switch to main branch first');
-        process.exit(1);
-    }
-
-    // Ensure working directory is clean
-    if (!checkWorkingDirectory()) {
-        console.error('Working directory is not clean. Please commit or stash changes first.');
         process.exit(1);
     }
 
