@@ -40,9 +40,6 @@ export default defineConfig(({ command }): UserConfig => {
             assetFileNames: (assetInfo) => {
               return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
             },
-            // Preserve modules for better tree shaking
-            preserveModules: true,
-            preserveModulesRoot: 'src'
           }
         },
         sourcemap: true,

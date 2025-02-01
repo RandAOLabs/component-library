@@ -1,6 +1,7 @@
 .spinner {
     position: relative;
     display: inline-block;
+    --spinner-color: currentColor;
 }
 
 .spinner__shape {
@@ -9,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid currentColor;
+    border: 2px solid var(--spinner-color);
     animation: morph 2s ease-in-out infinite;
 }
 
