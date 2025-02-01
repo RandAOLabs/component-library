@@ -1,130 +1,110 @@
 # Development Guide
 
-## Getting Started
+## Setup
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/RandAOLabs/component-library.git
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/RandAOLabs/component-library.git
 
-2. Install dependencies
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
+```
 
-3. Start development server
-   ```bash
-   npm run dev
-   ```
+## Development Commands
 
-4. Build the library
-   ```bash
-   npm run build
-   ```
+- `npm run dev` - Start development server for example app
+- `npm run storybook` - Start Storybook documentation server
+- `npm run build` - Build library for production
+- `npm run build-storybook` - Build static Storybook site
+- `npm run docs` - Generate API documentation
+- `npm run lint` - Run ESLint
 
-5. Generate documentation
-   ```bash
-   npm run docs
-   ```
+## Development Workflow
+
+1. **Component Development**
+   - Create new components in `src/components/[ComponentName]`
+   - Follow the existing component structure:
+     ```
+     ComponentName/
+     ├── ComponentName.tsx
+     ├── ComponentName.css
+     ├── ComponentName.stories.tsx
+     └── index.ts
+     ```
+
+2. **Documentation**
+   - Add Storybook stories for new components
+   - Include examples of all component props and variants
+   - Write clear prop descriptions in component interfaces
+   - Update relevant markdown documentation in `docs/`
+
+3. **Testing**
+   - Test components in Storybook
+   - Verify theme compatibility (light/dark modes)
+   - Check responsive behavior
+   - Ensure accessibility standards are met
+
+4. **Code Style**
+   - Follow TypeScript best practices
+   - Use CSS custom properties for theming
+   - Keep components modular and reusable
+   - Document props with JSDoc comments
 
 ## Project Structure
 
 ```
 component-library/
+├── .storybook/          # Storybook configuration
+├── docs/                # Documentation
 ├── src/
-│   ├── components/     # React components
-│   │   ├── base/      # Base components
-│   │   └── Button/    # Button component
-│   ├── theme/         # Theme system
-│   └── example/       # Example app
-├── docs/              # Documentation
-└── dist/             # Built files
+│   ├── components/      # React components
+│   ├── theme/           # Theme system
+│   └── example/         # Example app
+└── package.json
 ```
 
-## Development Workflow
+## Git Workflow
 
-1. **Create a Feature Branch**
+1. Create a feature branch:
    ```bash
-   git checkout -b feature/your-feature
+   git checkout -b feature/component-name
    ```
 
-2. **Start Development Server**
-   ```bash
-   npm run dev
-   ```
-   This will start a local server at http://localhost:5173 with hot reload.
-
-3. **Make Changes**
-   - Follow TypeScript best practices
-   - Add JSDoc comments
-   - Update tests if needed
-   - Update documentation
-
-4. **Test Your Changes**
-   - Check browser compatibility
-   - Verify theme switching
-   - Test responsive design
-
-5. **Build and Document**
-   ```bash
-   npm run build      # Build the library
-   npm run docs       # Generate documentation
-   ```
-
-6. **Commit Changes**
-   Follow [Conventional Commits](https://www.conventionalcommits.org/):
+2. Make your changes and commit:
    ```bash
    git add .
-   git commit -m "feat: add new feature"
+   git commit -m "feat: add new component"
    ```
 
-## Code Style
+3. Push changes and create a pull request:
+   ```bash
+   git push origin feature/component-name
+   ```
 
+## Release Process
+
+1. Update version in `package.json`
+2. Build and test:
+   ```bash
+   npm run build
+   npm run build-storybook
+   ```
+3. Create git tag:
+   ```bash
+   git tag vX.Y.Z
+   git push origin vX.Y.Z
+   ```
+4. Publish to npm:
+   ```bash
+   npm publish
+   ```
+
+## Best Practices
+
+- Keep components focused and single-purpose
 - Use TypeScript for type safety
-- Follow React best practices
-- Use CSS variables for theming
-- Keep components modular
-- Write clear documentation
-
-## Building for Production
-
-```bash
-npm run build
-```
-
-This will:
-- Generate ES and UMD bundles
-- Create TypeScript declaration files
-- Generate source maps
-- Output to `dist/` directory
-
-## Documentation
-
-We use TypeDoc for API documentation:
-```bash
-npm run docs
-```
-
-Document your code with JSDoc comments:
-```typescript
-/**
- * Component description
- * @param props - Props description
- * @returns JSX element
- */
-```
-
-## Version Control
-
-- Use feature branches
-- Follow conventional commits
-- Keep commits focused
+- Follow semantic versioning
 - Write clear commit messages
-
-## Tips
-
-- Use the example app for testing
-- Check browser console for errors
-- Test both light and dark themes
-- Verify responsive behavior
-- Keep bundle size in mind
+- Document all public APIs
+- Consider accessibility in design and implementation
+- Test across different browsers and devices
