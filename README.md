@@ -5,174 +5,58 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/RandAOLabs/component-library/publish.yml?branch=main)](https://github.com/RandAOLabs/component-library/actions)
 [![npm downloads](https://img.shields.io/npm/dm/@randaotoken/component-library.svg)](https://www.npmjs.com/package/@randaotoken/component-library)
+[![Documentation](https://img.shields.io/badge/docs-TypeDoc-blue)](https://randaolabs.github.io/component-library/)
 
 A modern, minimalist React component library with a bold monospace aesthetic, built for RandAO projects.
 
-## Documentation
+## 📚 Documentation
 
-- [Component Documentation](https://randaolabs.github.io/component-library/)
-- [GitHub Repository](https://github.com/RandAOLabs/component-library)
-- [npm Package](https://www.npmjs.com/package/@randaotoken/component-library)
-- [Issue Tracker](https://github.com/RandAOLabs/component-library/issues)
+<div align="center">
 
-## Features
+[![Development Guide](https://img.shields.io/badge/📖-Development_Guide-blue?style=for-the-badge)](docs/development.md)
+[![Contributing Guide](https://img.shields.io/badge/🤝-Contributing_Guide-green?style=for-the-badge)](docs/contributing.md)
+[![Security Policy](https://img.shields.io/badge/🔒-Security_Policy-red?style=for-the-badge)](docs/security.md)
+[![Theme System](https://img.shields.io/badge/🎨-Theme_System-orange?style=for-the-badge)](docs/theme-system.md)
+[![API Documentation](https://img.shields.io/badge/📑-API_Documentation-purple?style=for-the-badge)](https://randaolabs.github.io/component-library/)
 
-- 🎨 Minimalist design with bold monospace typography
-- 🌓 Seamless light/dark theme switching
-- 📦 TypeScript support with source maps
-- 🎯 Zero runtime dependencies
-- ⚡ Built with Vite
-- 🔄 System theme detection & persistence
-- 💫 Smooth transitions & animations
+</div>
 
-## Quick Links
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Theme System](#theme-system)
-- [Development](#development)
-- [Browser Support](#browser-support)
-
-## Installation
+## ⚡ Quick Start
 
 ```bash
 npm install @randaotoken/component-library
 ```
 
-[![NPM](https://nodei.co/npm/@randaotoken/component-library.png)](https://nodei.co/npm/@randaotoken/component-library/)
-
-## Usage
-
-First, wrap your application with the ThemeProvider:
-
 ```tsx
-import { ThemeProvider } from '@randaotoken/component-library';
+import { Button, ThemeProvider } from '@randaotoken/component-library';
 
 function App() {
   return (
     <ThemeProvider>
-      <YourApp />
+      <Button variant="primary">
+        Click me
+      </Button>
     </ThemeProvider>
   );
 }
 ```
 
-Then use components with automatic theme support:
+## 🧩 Components
 
-```tsx
-import { Button, useTheme } from '@randaotoken/component-library';
+<div align="center">
 
-function Example() {
-  const { theme, setTheme } = useTheme();
+| Component | Description | Status |
+|-----------|-------------|---------|
+| Button | Versatile button component | ✅ Ready |
+| *More coming soon...* | | 🚧 In Progress |
 
-  return (
-    <Button 
-      variant="primary"
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-    >
-      Toggle Theme
-    </Button>
-  );
-}
-```
+</div>
 
-## Components
+## 📦 Package Details
 
-### Button
+[![NPM](https://nodei.co/npm/@randaotoken/component-library.png)](https://nodei.co/npm/@randaotoken/component-library/)
 
-A versatile button component with multiple variants and states.
-
-```tsx
-// Primary button
-<Button variant="primary">Primary</Button>
-
-// Secondary button
-<Button variant="secondary">Secondary</Button>
-
-// Outline button
-<Button variant="outline">Outline</Button>
-
-// Different sizes
-<Button size="small">Small</Button>
-<Button size="medium">Medium</Button>
-<Button size="large">Large</Button>
-
-// States
-<Button disabled>Disabled</Button>
-<Button loading>Loading</Button>
-
-// With icons
-<Button startIcon={<Icon />}>With Icon</Button>
-```
-
-## Theme System
-
-The library includes a comprehensive theme system that:
-
-- Automatically detects system color scheme preference
-- Persists theme choice in localStorage
-- Provides smooth transitions between themes
-- Uses CSS variables for easy customization
-
-### Using Theme Hooks
-
-```tsx
-// Access current theme
-const { theme } = useTheme();
-
-// Toggle theme
-const toggleTheme = useThemeToggle();
-
-// Set theme directly
-const { setTheme } = useTheme();
-setTheme('dark');
-```
-
-## Development
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/RandAOLabs/component-library.git
-   ```
-
-2. Install dependencies
-   ```bash
-   npm install
-   ```
-
-3. Start development server
-   ```bash
-   npm run dev
-   ```
-
-4. Build the library
-   ```bash
-   npm run build
-   ```
-
-5. Generate documentation
-   ```bash
-   npm run docs
-   ```
-
-## Browser Support
-
-- Chrome
-- Firefox
-- Safari
-- Edge
-- Opera
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](https://github.com/RandAOLabs/component-library/blob/main/CONTRIBUTING.md) for details.
-
-## Security
-
-For security issues, please see our [Security Policy](https://github.com/RandAOLabs/component-library/security/policy).
-
-## License
+## 📝 License
 
 MIT © RandAO Labs
 
