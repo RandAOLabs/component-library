@@ -8,6 +8,10 @@
 // Components
 export * from './components/Button';
 export * from './components/Spinner';
+export * from './components/ThemeToggle';
+export * from './components/Tooltip';
+export * from './components/InfoIcon';
+export * from './components/Table';
 
 // Theme System
 export {

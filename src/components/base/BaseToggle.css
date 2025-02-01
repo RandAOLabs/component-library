@@ -1,0 +1,160 @@
+.toggle-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+
+.toggle:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-text);
+    border-radius: 999px;
+}
+
+.toggle__track {
+    position: relative;
+    background-color: var(--color-grey-300);
+    border-radius: 999px;
+    transition: background-color 0.2s ease;
+}
+
+.toggle__thumb {
+    position: absolute;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-grey-400);
+    border-radius: 50%;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.2s ease;
+    will-change: transform;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Sizes */
+.toggle--small .toggle__track {
+    width: 32px;
+    height: 18px;
+}
+
+.toggle--small .toggle__thumb {
+    width: 14px;
+    height: 14px;
+}
+
+.toggle--medium .toggle__track {
+    width: 44px;
+    height: 24px;
+}
+
+.toggle--medium .toggle__thumb {
+    width: 20px;
+    height: 20px;
+}
+
+.toggle--large .toggle__track {
+    width: 56px;
+    height: 30px;
+}
+
+.toggle--large .toggle__thumb {
+    width: 26px;
+    height: 26px;
+}
+
+/* Checked state */
+.toggle--checked .toggle__track {
+    background-color: var(--color-text);
+}
+
+.toggle--checked.toggle--small .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(8px);
+}
+
+.toggle--checked.toggle--medium .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(11px);
+}
+
+.toggle--checked.toggle--large .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(14px);
+}
+
+/* Unchecked state */
+.toggle--small .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-8px);
+}
+
+.toggle--medium .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-11px);
+}
+
+.toggle--large .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-14px);
+}
+
+/* Disabled state */
+.toggle--disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Label styles */
+.toggle__label {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .toggle__track {
+    background-color: var(--color-grey-700);
+    border: 1px solid var(--color-grey-600);
+}
+
+[data-theme='dark'] .toggle__thumb {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-500);
+}
+
+[data-theme='dark'] .toggle--checked .toggle__track {
+    background-color: var(--color-grey-600);
+    border-color: var(--color-grey-500);
+}
+
+[data-theme='dark'] .toggle--checked .toggle__thumb {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-400);
+}
+
+/* Hover effects */
+.toggle:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-8px) scale(1.1);
+}
+
+.toggle--medium:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-11px) scale(1.1);
+}
+
+.toggle--large:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(-14px) scale(1.1);
+}
+
+.toggle--checked:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(8px) scale(1.1);
+}
+
+.toggle--checked.toggle--medium:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(11px) scale(1.1);
+}
+
+.toggle--checked.toggle--large:not(.toggle--disabled):hover .toggle__thumb {
+    transform: translate(-50%, -50%) translateX(14px) scale(1.1);
+}

@@ -1,0 +1,160 @@
+.theme-toggle .toggle__track {
+    overflow: hidden;
+}
+
+.theme-toggle__icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.theme-toggle__icon {
+    color: var(--color-text);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* Sun icon */
+.theme-toggle__icon--sun {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateX(-8px) scale(0.8);
+    color: #fbbf24;
+    /* Warm yellow */
+}
+
+.toggle--checked .theme-toggle__icon--sun {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(8px) scale(0.5);
+}
+
+/* Moon icon */
+.theme-toggle__icon--moon {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(-8px) scale(0.5);
+    color: #94a3b8;
+    /* Light gray */
+}
+
+.toggle--checked .theme-toggle__icon--moon {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateX(8px) scale(0.8);
+}
+
+/* Size adjustments */
+.toggle--small .theme-toggle__icon {
+    width: 12px;
+    height: 12px;
+}
+
+.toggle--medium .theme-toggle__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.toggle--large .theme-toggle__icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Size-specific translations */
+.toggle--medium .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(-11px) scale(0.8);
+}
+
+.toggle--medium.toggle--checked .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(11px) scale(0.5);
+}
+
+.toggle--medium .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(-11px) scale(0.5);
+}
+
+.toggle--medium.toggle--checked .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(11px) scale(0.8);
+}
+
+.toggle--large .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(-14px) scale(0.8);
+}
+
+.toggle--large.toggle--checked .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(14px) scale(0.5);
+}
+
+.toggle--large .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(-14px) scale(0.5);
+}
+
+.toggle--large.toggle--checked .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(14px) scale(0.8);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .theme-toggle__icon--sun {
+    color: #fbbf24;
+    /* Keep sun yellow in dark mode */
+}
+
+[data-theme='dark'] .theme-toggle__icon--moon {
+    color: #f1f5f9;
+    /* Make moon lighter in dark mode */
+}
+
+/* Hover effects */
+.theme-toggle:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(-8px) scale(0.9);
+}
+
+.theme-toggle:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(-8px) scale(0.9);
+}
+
+.toggle--checked.theme-toggle:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(8px) scale(0.5);
+}
+
+.toggle--checked.theme-toggle:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(8px) scale(0.9);
+}
+
+/* Medium hover effects */
+.toggle--medium:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(-11px) scale(0.9);
+}
+
+.toggle--medium:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(-11px) scale(0.9);
+}
+
+.toggle--medium.toggle--checked:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(11px) scale(0.5);
+}
+
+.toggle--medium.toggle--checked:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(11px) scale(0.9);
+}
+
+/* Large hover effects */
+.toggle--large:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(-14px) scale(0.9);
+}
+
+.toggle--large:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(-14px) scale(0.9);
+}
+
+.toggle--large.toggle--checked:not(.toggle--disabled):hover .theme-toggle__icon--sun {
+    transform: translate(-50%, -50%) translateX(14px) scale(0.5);
+}
+
+.toggle--large.toggle--checked:not(.toggle--disabled):hover .theme-toggle__icon--moon {
+    transform: translate(-50%, -50%) translateX(14px) scale(0.9);
+}

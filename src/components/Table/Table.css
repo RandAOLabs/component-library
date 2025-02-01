@@ -1,0 +1,276 @@
+.table-container {
+    width: 100%;
+    position: relative;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Header styles */
+.table__header {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    background-color: var(--color-grey-100);
+    border-bottom: 1px solid var(--color-grey-200);
+    transition: all 0.2s ease;
+}
+
+.table--sticky-header .table__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table__header--sortable {
+    cursor: pointer;
+}
+
+.table__header--sortable:hover {
+    background-color: var(--color-grey-200);
+}
+
+.table__header--center {
+    text-align: center;
+}
+
+.table__header--right {
+    text-align: right;
+}
+
+.table__header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Sort icon */
+.table__sort-icon {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.table__sort-icon--asc {
+    border-bottom: 4px solid var(--color-text);
+}
+
+.table__sort-icon--desc {
+    border-top: 4px solid var(--color-text);
+}
+
+/* Cell styles */
+.table__cell {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-grey-200);
+    transition: all 0.2s ease;
+    background-color: var(--color-background);
+}
+
+.table__cell--center {
+    text-align: center;
+}
+
+.table__cell--right {
+    text-align: right;
+}
+
+.table__cell--wrap {
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Row styles */
+.table__row {
+    transition: all 0.2s ease;
+}
+
+.table--hoverable .table__row:hover {
+    background-color: var(--color-grey-100);
+}
+
+.table--striped .table__row:nth-child(even) {
+    background-color: var(--color-grey-50);
+}
+
+.table--striped .table__row:nth-child(even) .table__cell {
+    background-color: var(--color-grey-50);
+}
+
+/* Selection styles - Checkbox */
+.table__select-cell {
+    width: 48px;
+    padding: 0.75rem;
+    text-align: center;
+    background-color: var(--color-grey-100);
+    border-bottom: 1px solid var(--color-grey-200);
+    border-right: 1px solid var(--color-grey-200);
+}
+
+/* Selection styles - Highlight */
+.table__row--selected {
+    background-color: var(--color-grey-100) !important;
+}
+
+.table__row--selected .table__cell {
+    background-color: var(--color-grey-100) !important;
+}
+
+.table__row--highlight:hover {
+    cursor: pointer;
+}
+
+/* Loading state */
+.table--loading {
+    position: relative;
+}
+
+.table--loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-background);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.table__loading-cell {
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--color-background);
+}
+
+.table__loading-cell .spinner {
+    opacity: 0.7;
+}
+
+/* Empty state */
+.table__empty-cell {
+    padding: 3rem;
+    text-align: center;
+    color: var(--color-grey-500);
+    background-color: var(--color-background);
+}
+
+/* Pagination */
+.table__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid var(--color-grey-200);
+    background-color: var(--color-background);
+    transition: all 0.2s ease;
+}
+
+.table__pagination-info {
+    color: var(--color-grey-600);
+}
+
+/* Size variants */
+.table--small .table__header,
+.table--small .table__cell {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.table--large .table__header,
+.table--large .table__cell {
+    padding: 1rem 1.25rem;
+}
+
+/* Bordered variant */
+.table--bordered .table__header,
+.table--bordered .table__cell {
+    border: 1px solid var(--color-grey-200);
+}
+
+/* Scrollable */
+.table--scrollable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .table {
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-100);
+}
+
+[data-theme='dark'] .table__header {
+    background-color: var(--color-grey-850);
+    border-bottom-color: var(--color-grey-700);
+    color: var(--color-grey-100);
+}
+
+[data-theme='dark'] .table__header--sortable:hover {
+    background-color: var(--color-grey-800);
+}
+
+[data-theme='dark'] .table__cell {
+    background-color: var(--color-grey-900);
+    border-bottom-color: var(--color-grey-700);
+    color: var(--color-grey-100);
+}
+
+[data-theme='dark'] .table__select-cell {
+    background-color: var(--color-grey-850);
+    border-bottom-color: var(--color-grey-700);
+    border-right-color: var(--color-grey-700);
+}
+
+[data-theme='dark'] .table--hoverable .table__row:hover {
+    background-color: var(--color-grey-850);
+}
+
+[data-theme='dark'] .table--hoverable .table__row:hover .table__cell {
+    background-color: var(--color-grey-850);
+}
+
+[data-theme='dark'] .table--striped .table__row:nth-child(even) {
+    background-color: var(--color-grey-850);
+}
+
+[data-theme='dark'] .table--striped .table__row:nth-child(even) .table__cell {
+    background-color: var(--color-grey-850);
+}
+
+[data-theme='dark'] .table__row--selected {
+    background-color: var(--color-grey-800) !important;
+}
+
+[data-theme='dark'] .table__row--selected .table__cell {
+    background-color: var(--color-grey-800) !important;
+}
+
+[data-theme='dark'] .table__pagination {
+    background-color: var(--color-grey-900);
+    border-top-color: var(--color-grey-700);
+}
+
+[data-theme='dark'] .table--loading::after {
+    background-color: var(--color-grey-900);
+}
+
+[data-theme='dark'] .table__loading-cell,
+[data-theme='dark'] .table__empty-cell {
+    background-color: var(--color-grey-900);
+}
+
+[data-theme='dark'] .table__empty-cell {
+    color: var(--color-grey-400);
+}
+
+[data-theme='dark'] .table__pagination-info {
+    color: var(--color-grey-400);
+}
