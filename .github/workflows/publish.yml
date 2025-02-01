@@ -23,14 +23,15 @@ jobs:
       - name: Clean and install dependencies
         run: |
           rm -rf node_modules package-lock.json
-          npm install -g @storybook/cli
           npm install
 
       - name: Build
         run: npm run build
 
       - name: Generate documentation
-        run: npm run docs
+        run: |
+          export PATH="$PATH:$(pwd)/node_modules/.bin"
+          npm run docs
 
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc

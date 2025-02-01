@@ -1,6 +1,6 @@
 {
   "name": "@randaotoken/component-library",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -29,8 +29,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "storybook": "npx storybook dev -p 6006",
-    "build-storybook": "npx storybook build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "docs": "npm run build-storybook",
     "version:patch": "node scripts/bump-version.js patch",
     "version:minor": "node scripts/bump-version.js minor",
@@ -47,10 +47,10 @@
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
     "@storybook/blocks": "^7.6.10",
-    "@storybook/builder-vite": "^7.6.10",
     "@storybook/react": "^7.6.10",
-    "@storybook/react-vite": "^7.6.10",
-    "@storybook/preset-react-webpack": "^7.6.10",
+    "@storybook/react-webpack5": "^7.6.10",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/builder-webpack5": "^7.6.10",
     "@storybook/cli": "^7.6.10",
     "@storybook/testing-library": "^0.2.2",
     "@types/node": "^20.11.16",
@@ -64,7 +64,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "vite": "^5.0.12",
+    "webpack": "^5.90.0"
   },
   "keywords": [
     "react",
