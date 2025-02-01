@@ -1,18 +1,30 @@
 import React from 'react';
 import { Button } from '../components/Button';
-import { ThemeProvider, useTheme, useThemeToggle } from '../theme';
+import { ThemeProvider, useTheme } from '../theme';
 
 const ExampleContent = () => {
-    const { theme } = useTheme();
-    const toggleTheme = useThemeToggle();
+    const { theme, setTheme } = useTheme();
 
     return (
-        <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-            <header style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{
+            padding: '2rem',
+            maxWidth: '800px',
+            margin: '0 auto',
+            minHeight: '100vh',
+            backgroundColor: 'var(--color-background)',
+            color: 'var(--color-text)',
+            transition: 'var(--theme-transition)'
+        }}>
+            <header style={{
+                marginBottom: '2rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+            }}>
                 <h1>Component Library Example</h1>
                 <Button
                     variant="outline"
-                    onClick={toggleTheme}
+                    onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                 >
                     Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme
                 </Button>
