@@ -1,14 +1,12 @@
-# Component Library
+# RandAOToken Component Library
 
-A modern React component library with TypeScript support and theming.
+[![npm version](https://img.shields.io/npm/v/@randaotoken/component-library.svg)](https://www.npmjs.com/package/@randaotoken/component-library)
+[![npm downloads](https://img.shields.io/npm/dm/@randaotoken/component-library.svg)](https://www.npmjs.com/package/@randaotoken/component-library)
+[![Build Status](https://github.com/RandAOLabs/component-library/actions/workflows/publish.yml/badge.svg)](https://github.com/RandAOLabs/component-library/actions/workflows/publish.yml)
+[![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://randaolabs.github.io/component-library)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Features
-
-- 🎨 Customizable theming with light/dark mode support
-- 📦 Tree-shakeable exports
-- 🔍 Fully typed with TypeScript
-- 📱 Responsive and accessible components
-- 🎯 Zero runtime dependencies
+A sleek modern React component library with TypeScript support and theming.
 
 ## Installation
 
@@ -40,3 +38,9 @@ function App() {
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+Made with ❤️ by the RandAO team
+</div>
