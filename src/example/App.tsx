@@ -21,12 +21,12 @@ const ExampleContent = () => {
                 justifyContent: 'space-between',
                 alignItems: 'center'
             }}>
-                <h1>Component Library Example</h1>
+                <h1>RandAO Components</h1>
                 <Button
                     variant="outline"
                     onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                 >
-                    Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme
+                    {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
                 </Button>
             </header>
 
@@ -34,13 +34,13 @@ const ExampleContent = () => {
                 <h2>Button Variants</h2>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
                     <Button variant="primary">
-                        Primary Button
+                        Mint Token
                     </Button>
                     <Button variant="secondary">
-                        Secondary Button
+                        Stake Now
                     </Button>
                     <Button variant="outline">
-                        Outline Button
+                        Connect
                     </Button>
                 </div>
             </section>
@@ -49,13 +49,13 @@ const ExampleContent = () => {
                 <h2>Button Sizes</h2>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem', alignItems: 'center' }}>
                     <Button variant="primary" size="small">
-                        Small Button
+                        Small
                     </Button>
                     <Button variant="primary" size="medium">
-                        Medium Button
+                        Medium
                     </Button>
                     <Button variant="primary" size="large">
-                        Large Button
+                        Large
                     </Button>
                 </div>
             </section>
@@ -64,10 +64,10 @@ const ExampleContent = () => {
                 <h2>Button States</h2>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
                     <Button variant="primary" disabled>
-                        Disabled Button
+                        Disabled
                     </Button>
                     <Button variant="primary" loading>
-                        Loading Button
+                        Loading
                     </Button>
                 </div>
             </section>
@@ -77,22 +77,22 @@ const ExampleContent = () => {
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
                     <Button
                         variant="primary"
-                        startIcon={<span>👋</span>}
+                        startIcon={<span>🪙</span>}
                     >
-                        With Start Icon
+                        Mint
                     </Button>
                     <Button
                         variant="primary"
-                        endIcon={<span>🚀</span>}
+                        endIcon={<span>🔒</span>}
                     >
-                        With End Icon
+                        Lock
                     </Button>
                     <Button
                         variant="primary"
-                        startIcon={<span>⭐</span>}
-                        endIcon={<span>⭐</span>}
+                        startIcon={<span>💎</span>}
+                        endIcon={<span>💎</span>}
                     >
-                        Both Icons
+                        Stake
                     </Button>
                 </div>
             </section>

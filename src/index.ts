@@ -7,6 +7,7 @@
 
 // Components
 export * from './components/Button';
+export * from './components/Spinner';
 
 // Theme System
 export {

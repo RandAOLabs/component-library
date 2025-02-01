@@ -27,30 +27,17 @@
 }
 
 .button--loading .button__text {
-    opacity: 0.7;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
 }
 
-/* Spinner animation */
+/* Spinner positioning */
 .button__spinner {
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid transparent;
-    border-top-color: currentColor;
-    border-right-color: currentColor;
-    border-radius: 50%;
-    animation: button-spin 0.75s linear infinite;
-    margin-right: 0.5rem;
-}
-
-@keyframes button-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    margin-right: 0.75rem;
+    color: currentColor;
+    transform-origin: center;
+    /* Slightly lift the spinner above the button content */
+    transform: translateZ(1px);
 }
 
 /* Ensure text stays centered when loading */
@@ -58,20 +45,11 @@
     visibility: visible;
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-    .button__icon {
-        transform: scale(0.9);
-    }
+/* Adjust spinner position for different button sizes */
+.btn--small .button__spinner {
+    margin-right: 0.5rem;
 }
 
-/* Focus ring color based on theme */
-.button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--color-grey-300);
-}
-
-/* Dark theme adjustments */
-[data-theme='dark'] .button:focus-visible {
-    box-shadow: 0 0 0 3px var(--color-grey-700);
+.btn--large .button__spinner {
+    margin-right: 1rem;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BaseButton, BaseButtonProps } from '../base/BaseButton';
+import { Spinner } from '../Spinner';
 import './Button.css';
 
 export interface ButtonProps extends BaseButtonProps {
@@ -29,6 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
     children,
     disabled,
     className = '',
+    size = 'medium',
     ...props
 }) => {
     const buttonClasses = [
@@ -37,16 +39,19 @@ export const Button: React.FC<ButtonProps> = ({
         className
     ].filter(Boolean).join(' ');
 
+    // Adjust spinner size based on button size
+    const spinnerSize = size === 'small' ? 12 : size === 'large' ? 18 : 16;
+
     return (
         <BaseButton
             className={buttonClasses}
             disabled={disabled || loading}
+            size={size}
             {...props}
         >
-            {loading && (
-                <span className="button__spinner" aria-hidden="true" />
-            )}
-            {!loading && startIcon && (
+            {loading ? (
+                <Spinner size={spinnerSize} className="button__spinner" />
+            ) : startIcon && (
                 <span className="button__icon button__icon--start">
                     {startIcon}
                 </span>
