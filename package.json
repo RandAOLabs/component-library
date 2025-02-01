@@ -17,8 +17,7 @@
     "**/*.css"
   ],
   "files": [
-    "dist",
-    "docs"
+    "dist"
   ],
   "engines": {
     "node": ">=22.0.0"
@@ -27,10 +26,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:types": "tsc --emitDeclarationOnly",
-    "docs": "typedoc",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build && npm run docs",
+    "prepublishOnly": "npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -60,7 +58,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.3.3",
-    "typedoc": "^0.25.7",
     "vite": "^5.0.12"
   },
   "keywords": [
