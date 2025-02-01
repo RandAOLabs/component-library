@@ -70,6 +70,24 @@ Pull requests are the best way to propose changes to the codebase. We actively w
    git push origin feature/amazing-feature
    ```
 
+## Versioning
+
+We use [Semantic Versioning](https://semver.org/) for version management. The project includes a version bump script to help maintain consistent versioning:
+
+- `npm run version:patch` - for backwards-compatible bug fixes
+- `npm run version:minor` - for new features that are backwards-compatible
+- `npm run version:major` - for breaking changes
+
+The version bump script will:
+1. Ensure you're on the main branch
+2. Pull latest changes
+3. Update version in package.json
+4. Create a commit with the version change
+5. Create a git tag
+6. Push changes and tags
+
+This will trigger the GitHub Actions workflow to build, test, and publish the new version.
+
 ## Component Guidelines
 
 ### Structure
