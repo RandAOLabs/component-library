@@ -1,21 +1,19 @@
 import React from 'react';
+import { BaseButton, BaseButtonProps } from '../base/BaseButton';
 import './Button.css';
 
-export interface ButtonProps {
-    /** The button's content */
-    children: React.ReactNode;
-    /** Optional variant for different button styles */
-    variant?: 'primary' | 'secondary' | 'outline';
-    /** Optional click handler */
-    onClick?: () => void;
-    /** Disabled state */
-    disabled?: boolean;
-    /** Additional CSS class names */
-    className?: string;
+export interface ButtonProps extends BaseButtonProps {
+    /** Optional loading state */
+    loading?: boolean;
+    /** Optional icon to display before the button text */
+    startIcon?: React.ReactNode;
+    /** Optional icon to display after the button text */
+    endIcon?: React.ReactNode;
 }
 
 /**
- * A customizable button component with different variants
+ * Button component that extends BaseButton with additional features
+ * like loading state and icon support.
  * 
  * @example
  * ```tsx
@@ -25,19 +23,40 @@ export interface ButtonProps {
  * ```
  */
 export const Button: React.FC<ButtonProps> = ({
+    loading = false,
+    startIcon,
+    endIcon,
     children,
-    variant = 'primary',
-    onClick,
-    disabled = false,
+    disabled,
     className = '',
+    ...props
 }) => {
+    const buttonClasses = [
+        'button',
+        loading && 'button--loading',
+        className
+    ].filter(Boolean).join(' ');
+
     return (
-        <button
-            className={`btn btn-${variant} ${className}`.trim()}
-            onClick={onClick}
-            disabled={disabled}
+        <BaseButton
+            className={buttonClasses}
+            disabled={disabled || loading}
+            {...props}
         >
-            {children}
-        </button>
+            {loading && (
+                <span className="button__spinner" aria-hidden="true" />
+            )}
+            {!loading && startIcon && (
+                <span className="button__icon button__icon--start">
+                    {startIcon}
+                </span>
+            )}
+            <span className="button__text">{children}</span>
+            {!loading && endIcon && (
+                <span className="button__icon button__icon--end">
+                    {endIcon}
+                </span>
+            )}
+        </BaseButton>
     );
 };
