@@ -1,2 +1,7 @@
 export { Table } from './Table';
-export type { TableColumn, SortDirection } from './types';
+export type {
+    TableProps,
+    TableColumn,
+    SortDirection,
+    CellAlignment
+} from './types';

@@ -2,11 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
+import type { UserConfig } from 'vite'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command }): UserConfig => {
   if (command === 'serve') {
     // Development mode - serve example app
     return {
@@ -34,14 +35,23 @@ export default defineConfig(({ command }) => {
             globals: {
               react: 'React',
               'react-dom': 'ReactDOM'
-            }
+            },
+            // Ensure CSS is extracted to a separate file
+            assetFileNames: (assetInfo) => {
+              return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
+            },
+            // Preserve modules for better tree shaking
+            preserveModules: true,
+            preserveModulesRoot: 'src'
           }
         },
         sourcemap: true,
         // Reduce bloat from legacy polyfills
         target: 'esnext',
         // Leave minification up to applications
-        minify: false
+        minify: false,
+        // Ensure CSS is processed
+        cssCodeSplit: true
       },
       resolve: {
         alias: {

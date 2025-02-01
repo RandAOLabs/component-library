@@ -5,21 +5,45 @@
  * @packageDocumentation
  */
 
-// Components
-export * from './components/Button';
-export * from './components/Spinner';
-export * from './components/ThemeToggle';
-export * from './components/Tooltip';
-export * from './components/InfoIcon';
-export * from './components/Table';
+// Button
+export { Button } from './components/Button';
+export type { ButtonProps } from './components/Button';
+
+// Spinner
+export { Spinner } from './components/Spinner';
+export type { SpinnerProps } from './components/Spinner';
+
+// Theme Toggle
+export { ThemeToggle } from './components/ThemeToggle';
+export type { ThemeToggleProps } from './components/ThemeToggle';
+
+// Tooltip
+export { Tooltip } from './components/Tooltip';
+export type { TooltipProps } from './components/Tooltip';
+
+// Info Icon
+export { InfoIcon } from './components/InfoIcon';
+export type { InfoIconProps } from './components/InfoIcon';
+
+// Table
+export { Table } from './components/Table';
+export type {
+    TableProps,
+    TableColumn,
+    SortDirection,
+    CellAlignment
+} from './components/Table';
 
 // Theme System
 export {
     ThemeProvider,
     useTheme,
-    useThemeToggle,
-    type ThemeMode,
-    type Theme,
-    type ThemeColors,
-    type ThemeContextType
+    useThemeToggle
+} from './theme';
+
+export type {
+    ThemeMode,
+    Theme,
+    ThemeColors,
+    ThemeContextType
 } from './theme';
