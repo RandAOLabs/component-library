@@ -29,9 +29,7 @@ jobs:
         run: npm run build
 
       - name: Generate documentation
-        run: |
-          export PATH="$PATH:$(pwd)/node_modules/.bin"
-          npm run docs
+        run: npm run docs
 
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc

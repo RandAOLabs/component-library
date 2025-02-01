@@ -1,6 +1,6 @@
 {
   "name": "@randaotoken/component-library",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -29,8 +29,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "npx storybook dev -p 6006",
+    "build-storybook": "npx storybook build",
     "docs": "npm run build-storybook",
     "version:patch": "node scripts/bump-version.js patch",
     "version:minor": "node scripts/bump-version.js minor",
