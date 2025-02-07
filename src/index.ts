@@ -50,6 +50,18 @@ export type {
     SocialPlatform
 } from './components/SocialIcons';
 
+// Connect Wallet
+export {
+    ConnectWallet,
+    WalletProvider,
+    useWallet
+} from './components/ConnectWallet';
+export type {
+    ConnectWalletProps,
+    WalletContextType,
+    WalletProviderProps
+} from './components/ConnectWallet';
+
 // Theme System
 export {
     ThemeProvider,

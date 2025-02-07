@@ -5,6 +5,7 @@ import { InfoIcon } from '../components/InfoIcon';
 import { Table, TableColumn, SortDirection } from '../components/Table';
 import { ThemeProvider } from '../theme';
 import { SocialIcons, SocialLink } from '../components/SocialIcons';
+import { ConnectWallet, WalletProvider } from '../components/ConnectWallet';
 
 interface User {
     id: number;
@@ -138,10 +139,14 @@ const ExampleContent = () => {
                 marginBottom: '2rem',
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'center'
+                alignItems: 'center',
+                gap: '1rem'
             }}>
                 <h1>Component Library</h1>
-                <ThemeToggle size="large" />
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <ConnectWallet size="medium" />
+                    <ThemeToggle size="large" />
+                </div>
             </header>
 
             <section style={{ marginBottom: '2rem' }}>
@@ -251,7 +256,9 @@ const ExampleContent = () => {
 const App = () => {
     return (
         <ThemeProvider>
-            <ExampleContent />
+            <WalletProvider>
+                <ExampleContent />
+            </WalletProvider>
         </ThemeProvider>
     );
 };
