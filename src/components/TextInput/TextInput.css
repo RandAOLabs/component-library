@@ -1,0 +1,125 @@
+.text-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: fit-content;
+}
+
+.text-input--full-width {
+    width: 100%;
+}
+
+/* Label */
+.text-input__label {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+/* Container for input and icons */
+.text-input__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Icons */
+.text-input__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-grey-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.text-input__icon--start {
+    left: 0.75rem;
+}
+
+.text-input__icon--end {
+    right: 0.75rem;
+}
+
+.text-input__icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Input field adjustments for icons */
+.text-input__field--with-start-icon {
+    padding-left: 2.25rem;
+}
+
+.text-input__field--with-end-icon {
+    padding-right: 2.25rem;
+}
+
+/* Helper text */
+.text-input__helper {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-grey-500);
+    margin-top: 0.25rem;
+    min-height: 1.25rem;
+}
+
+.text-input__helper--error {
+    color: var(--color-error);
+}
+
+.text-input__helper--success {
+    color: var(--color-success);
+}
+
+/* States */
+.text-input--error .text-input__icon {
+    color: var(--color-error);
+}
+
+.text-input--success .text-input__icon {
+    color: var(--color-success);
+}
+
+/* Focus state */
+.text-input:focus-within:not(.text-input--error):not(.text-input--success) .text-input__icon {
+    color: var(--color-primary);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .text-input__label {
+    color: var(--color-grey-300);
+}
+
+[data-theme='dark'] .text-input__helper {
+    color: var(--color-grey-400);
+}
+
+[data-theme='dark'] .text-input__icon {
+    color: var(--color-grey-500);
+}
+
+/* Size-specific adjustments */
+.text-input--small .text-input__icon svg {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.text-input--large .text-input__icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Disabled state */
+.text-input--disabled .text-input__label,
+.text-input--disabled .text-input__helper,
+.text-input--disabled .text-input__icon {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

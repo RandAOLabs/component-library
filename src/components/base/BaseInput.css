@@ -1,0 +1,113 @@
+.base-input {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 0.75rem;
+    transition: all var(--transition-duration) var(--transition-timing);
+    outline: none;
+    width: auto;
+}
+
+/* Variants */
+.base-input--default {
+    background-color: var(--color-background);
+}
+
+.base-input--filled {
+    background-color: var(--color-grey-100);
+    border-color: transparent;
+}
+
+.base-input--outlined {
+    background-color: transparent;
+    border-color: var(--color-border);
+}
+
+/* Sizes */
+.base-input--small {
+    font-size: var(--font-size-sm);
+    padding: 0.25rem 0.5rem;
+    height: 2rem;
+}
+
+.base-input--medium {
+    font-size: var(--font-size-base);
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+}
+
+.base-input--large {
+    font-size: var(--font-size-lg);
+    padding: 0.75rem 1rem;
+    height: 3rem;
+}
+
+/* States */
+.base-input:hover:not(.base-input--disabled) {
+    border-color: var(--color-primary);
+}
+
+.base-input:focus:not(.base-input--disabled) {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-alpha);
+}
+
+.base-input--error {
+    border-color: var(--color-error) !important;
+}
+
+.base-input--error:focus {
+    box-shadow: 0 0 0 2px var(--color-error-alpha);
+}
+
+.base-input--success {
+    border-color: var(--color-success) !important;
+}
+
+.base-input--success:focus {
+    box-shadow: 0 0 0 2px var(--color-success-alpha);
+}
+
+.base-input--disabled {
+    background-color: var(--color-grey-100);
+    border-color: var(--color-grey-200);
+    color: var(--color-grey-400);
+    cursor: not-allowed;
+}
+
+.base-input--full-width {
+    width: 100%;
+}
+
+/* Placeholder styling */
+.base-input::placeholder {
+    color: var(--color-grey-400);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .base-input {
+    background-color: var(--color-grey-800);
+    border-color: var(--color-grey-700);
+}
+
+[data-theme='dark'] .base-input--filled {
+    background-color: var(--color-grey-900);
+}
+
+[data-theme='dark'] .base-input--outlined {
+    background-color: transparent;
+}
+
+[data-theme='dark'] .base-input--disabled {
+    background-color: var(--color-grey-900);
+    border-color: var(--color-grey-800);
+    color: var(--color-grey-600);
+}
+
+[data-theme='dark'] .base-input::placeholder {
+    color: var(--color-grey-600);
+}

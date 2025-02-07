@@ -55,6 +55,12 @@ export type {
     WalletProviderProps
 } from './components/ConnectWallet';
 
+export { TextInput } from './components/TextInput';
+export type { TextInputProps } from './components/TextInput';
+
+export { TextArea } from './components/TextArea';
+export type { TextAreaProps } from './components/TextArea';
+
 export {
     ThemeProvider,
     useTheme,
