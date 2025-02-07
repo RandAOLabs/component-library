@@ -35,10 +35,6 @@ export default defineConfig(({ command }): UserConfig => {
             globals: {
               react: 'React',
               'react-dom': 'ReactDOM'
-            },
-            // Ensure CSS is extracted to a separate file
-            assetFileNames: (assetInfo) => {
-              return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
             }
           }
         },
@@ -48,8 +44,11 @@ export default defineConfig(({ command }): UserConfig => {
         target: 'esnext',
         // Leave minification up to applications
         minify: false,
-        // Ensure CSS is processed
-        cssCodeSplit: true,
+        // Ensure CSS is injected into JS
+        cssCodeSplit: false,
+        cssMinify: false,
+        // Do not extract CSS to a separate file
+        assetsInlineLimit: 100000000,
         // Output to dist directory
         outDir: 'dist',
         // Clean dist directory before build

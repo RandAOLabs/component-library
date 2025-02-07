@@ -11,12 +11,9 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js",
       "source": "./src/index.ts"
-    },
-    "./style.css": "./dist/style.css"
+    }
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": true,
   "files": [
     "dist",
     "src"

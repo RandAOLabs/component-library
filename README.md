@@ -18,7 +18,6 @@ npm install @randaotoken/component-library
 
 ```tsx
 import { Button, ThemeProvider } from '@randaotoken/component-library';
-import '@randaotoken/component-library/style.css';
 
 function App() {
   return (
