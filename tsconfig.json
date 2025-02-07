@@ -12,11 +12,10 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
     "declaration": true,
     "declarationDir": "dist",
     "sourceMap": true,
+    "inlineSources": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": false,
@@ -29,7 +28,9 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "composite": true,
+    "declarationMap": true
   },
   "include": [
     "src"
@@ -38,7 +39,8 @@
     "node_modules",
     "dist",
     "**/*.test.ts",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    "**/*.stories.tsx"
   ],
   "references": [
     {

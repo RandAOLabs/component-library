@@ -40,6 +40,11 @@ export default defineConfig(({ command }): UserConfig => {
             assetFileNames: (assetInfo) => {
               return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
             },
+            // Generate source maps for each format
+            sourcemap: true,
+            // Preserve module structure for better debugging
+            preserveModules: true,
+            preserveModulesRoot: 'src'
           }
         },
         sourcemap: true,
@@ -48,7 +53,9 @@ export default defineConfig(({ command }): UserConfig => {
         // Leave minification up to applications
         minify: false,
         // Ensure CSS is processed
-        cssCodeSplit: true
+        cssCodeSplit: true,
+        // Ensure TypeScript source maps are generated
+        outDir: 'dist'
       },
       resolve: {
         alias: {
