@@ -41,10 +41,7 @@ export default defineConfig(({ command }): UserConfig => {
               return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
             },
             // Generate source maps for each format
-            sourcemap: true,
-            // Preserve module structure for better debugging
-            preserveModules: true,
-            preserveModulesRoot: 'src'
+            sourcemap: true
           }
         },
         sourcemap: true,
