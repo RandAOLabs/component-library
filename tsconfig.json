@@ -1,48 +1,40 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "ESNext"
     ],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "declaration": true,
-    "declarationDir": "./dist",
-    "emitDeclarationOnly": true,
-    "sourceMap": true,
-    "inlineSources": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
     "allowJs": false,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ]
-    },
-    "declarationMap": true,
-    "outDir": "./dist"
+    }
   },
   "include": [
     "src"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.stories.tsx"
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

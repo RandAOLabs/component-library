@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../theme';
+import './BaseButton.css';
 
 export interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     /** The button's variant */

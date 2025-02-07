@@ -44,15 +44,10 @@ export default defineConfig(({ command }): UserConfig => {
         target: 'esnext',
         // Leave minification up to applications
         minify: false,
-        // Ensure CSS is injected into JS
-        cssCodeSplit: false,
-        cssMinify: false,
-        // Do not extract CSS to a separate file
-        assetsInlineLimit: 100000000,
         // Output to dist directory
         outDir: 'dist',
         // Clean dist directory before build
-        emptyOutDir: false
+        emptyOutDir: true
       },
       resolve: {
         alias: {
