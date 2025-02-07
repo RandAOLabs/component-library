@@ -34,6 +34,22 @@ export type {
     CellAlignment
 } from './components/Table';
 
+// Social Icons
+export {
+    SocialIcons,
+    DiscordIcon,
+    XIcon,
+    TelegramIcon,
+    RedditIcon,
+    YoutubeIcon
+} from './components/SocialIcons';
+export type {
+    SocialIconProps,
+    SocialIconsProps,
+    SocialLink,
+    SocialPlatform
+} from './components/SocialIcons';
+
 // Theme System
 export {
     ThemeProvider,

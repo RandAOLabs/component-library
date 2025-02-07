@@ -4,6 +4,7 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { InfoIcon } from '../components/InfoIcon';
 import { Table, TableColumn, SortDirection } from '../components/Table';
 import { ThemeProvider } from '../theme';
+import { SocialIcons, SocialLink } from '../components/SocialIcons';
 
 interface User {
     id: number;
@@ -42,6 +43,15 @@ const ExampleContent = () => {
         selectedUsers: [],
         sortDirection: null
     });
+
+    // Example social links
+    const socialLinks: SocialLink[] = [
+        { platform: 'discord' as const, url: 'https://discord.gg/randao' },
+        { platform: 'x' as const, url: 'https://x.com/randao' },
+        { platform: 'telegram' as const, url: 'https://t.me/randao' },
+        { platform: 'reddit' as const, url: 'https://reddit.com/r/randao' },
+        { platform: 'youtube' as const, url: 'https://youtube.com/@randao' }
+    ];
 
     // Simulate data loading
     React.useEffect(() => {
@@ -133,6 +143,25 @@ const ExampleContent = () => {
                 <h1>Component Library</h1>
                 <ThemeToggle size="large" />
             </header>
+
+            <section style={{ marginBottom: '2rem' }}>
+                <h2>Social Icons</h2>
+                <div style={{
+                    marginTop: '1rem',
+                    padding: '2rem',
+                    backgroundColor: 'var(--color-grey-100)',
+                    borderRadius: '0.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1rem'
+                }}>
+                    <p>Default size (24px):</p>
+                    <SocialIcons links={socialLinks} />
+
+                    <p style={{ marginTop: '1rem' }}>Large size (32px):</p>
+                    <SocialIcons links={socialLinks} size={32} />
+                </div>
+            </section>
 
             <section style={{ marginBottom: '2rem' }}>
                 <div style={{

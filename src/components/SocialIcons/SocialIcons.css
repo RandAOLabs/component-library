@@ -1,0 +1,50 @@
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Platform-specific colors on hover */
+.social-icon.discord:hover {
+    color: #5865F2;
+}
+
+.social-icon.x:hover {
+    color: #000000;
+}
+
+[data-theme='dark'] .social-icon.x:hover {
+    color: #ffffff;
+}
+
+.social-icon.telegram:hover {
+    color: #26A5E4;
+}
+
+.social-icon.reddit:hover {
+    color: #FF4500;
+}
+
+.social-icon.youtube:hover {
+    color: #FF0000;
+}
