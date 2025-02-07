@@ -39,11 +39,10 @@ export default defineConfig(({ command }): UserConfig => {
             // Ensure CSS is extracted to a separate file
             assetFileNames: (assetInfo) => {
               return assetInfo.name === 'style.css' ? 'style.css' : assetInfo.name || '';
-            },
-            // Generate source maps for each format
-            sourcemap: true
+            }
           }
         },
+        // Generate source maps
         sourcemap: true,
         // Reduce bloat from legacy polyfills
         target: 'esnext',
@@ -51,8 +50,10 @@ export default defineConfig(({ command }): UserConfig => {
         minify: false,
         // Ensure CSS is processed
         cssCodeSplit: true,
-        // Ensure TypeScript source maps are generated
-        outDir: 'dist'
+        // Output to dist directory
+        outDir: 'dist',
+        // Clean dist directory before build
+        emptyOutDir: false
       },
       resolve: {
         alias: {

@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
-    "declarationDir": "dist",
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
     "sourceMap": true,
     "inlineSources": true,
     "jsx": "react-jsx",
@@ -23,14 +24,16 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": false,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "composite": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "outDir": "./dist"
   },
   "include": [
     "src"
@@ -41,10 +44,5 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.stories.tsx"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
 }
